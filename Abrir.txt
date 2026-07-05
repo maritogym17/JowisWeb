@@ -1,0 +1,15 @@
+Cómo abrirla en tu PC
+1. Instala Node.js (si no lo tienes)
+Descárgalo de nodejs.org (versión LTS).
+2. Descomprime el zip en una carpeta, por ejemplo C:\Proyectos\mi-web
+3. Abre una terminal en esa carpeta (clic derecho → "Abrir en Terminal" o PowerShell) e instala las dependencias:
+powershellnpm install
+Esto usa package.json, que lista dependencias como React, TailwindCSS, TanStack Router, etc. — puede tardar un par de minutos.
+4. Ejecuta el proyecto en modo desarrollo:
+powershellnpm run dev
+Esto arrancará un servidor local y te dará una URL (normalmente http://localhost:3000 o similar) que puedes abrir en tu navegador para ver la web funcionando.
+Nota sobre bun
+El proyecto tiene un archivo bun.lock, lo que sugiere que Lovable usó Bun en vez de npm para gestionar dependencias. Si quieres usar Bun (más rápido), puedes instalarlo desde bun.sh y luego ejecutar:
+powershellbun install
+bun run dev
+Pero npm funcionará igual de bien si ya lo tienes instalado.
