@@ -26,7 +26,7 @@ type Item = {
   name: string;
   price: string;
   desc?: string;
-  img?: string;
+  img: string;
   oldPrice?: string;
   badge?: string;
 };
@@ -34,76 +34,32 @@ type Section = { title: string; kicker: string; items: Item[] };
 
 const sections: Section[] = [
   {
-    title: "Before Heaven",
-    kicker: "Croquetas de la casa",
-    items: [
-      {
-        name: "Murcia Heaven Bite",
-        price: "2,20 €",
-        desc: "Marinera.",
-      },
-      {
-        name: "Croqueta Golden",
-        price: "2,00 €",
-        desc: "Croqueta de jamón.",
-        img: "https://glovo.dhmedia.io/image/menus-glovo/products/b8573baecae7aa645fca8cf46168b4f9da8490c168cff05004be8867ae271352?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-      {
-        name: "Croqueta Titán",
-        price: "2,50 €",
-        desc: "Croqueta de chuletón.",
-        img: "https://glovo.dhmedia.io/image/menus-glovo/products/3c0fef1833988e1b90efc856964aa924f11cd6de3e89bc01d15d14db9e81b8a2?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-    ],
-  },
-  {
-    title: "Green Heaven",
-    kicker: "Ensaladas",
-    items: [
-      {
-        name: "Artemis",
-        price: "11,00 €",
-        desc: "Mezcla de lechugas, pollo crujiente, tomates cherry, escamas de parmesano, picatostes y salsa césar.",
-      },
-      {
-        name: "Eden",
-        price: "9,00 €",
-        desc: "Lechuga, pollo crujiente, tomates cherry, cebolla crujiente, picatostes, perlas de mozzarella y nuestra salsa Deluxe.",
-      },
-    ],
-  },
-  {
     title: "Shared By The Gods",
     kicker: "Para compartir",
     items: [
       {
         name: "Elysium Nachos",
-        price: "12,00 €",
+        price: "15,00 €",
         desc: "Totopos caseros, guacamole, crema agria, pico de gallo, jalapeños, cheddar y pulled pork.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/406a153b064a9cceb6754a11ea3abcf1ea57d578fddf3f9c1edb89514e481d95?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Jowi's Fries",
-        price: "11,50 €",
-        desc: "Patatas fritas con queso fundido, pulled pork, bacon bits y salsa Jowi's.",
+        price: "14,50 €",
+        desc: "Patatas fritas con queso fundido, pulled pork, bacon bits y salsa jowi's.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/8a794cdb0727a029b777332ce45f98a9edf625e54d335ff6994633586268b5e6?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
-        name: "Valkyrie Fries",
-        price: "12,50 €",
-        desc: "Patatas fritas con cheddar fundido, fingers de pollo, cebollino, salsa Jowi's y salsa de ajo asado.",
+        name: "Inferno Fries",
+        price: "12,90 €",
+        desc: "Patatas fritas con bacon bits y queso fundido al horno.",
+        img: "https://glovo.dhmedia.io/image/menus-glovo/products/02ce9c6614b9586bdcf2d48414008961b14c7604aa4dbe274393c5c20b3984e2?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Paradise Fries",
-        price: "9,50 €",
-        desc: "Patatas fritas con cebolla ligeramente caramelizada, cheddar fundido y salsa Jowi's.",
+        price: "12,50 €",
+        desc: "Patatas fritas con cebolla ligeramente caramelizada, cheddar fundido y salsa jowi's.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/25222493b850118cd601fb00c10bfd0c41bf58dbd6422cb262860e78e0192bf0?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-      {
-        name: "Inferno Fries",
-        price: "10,50 €",
-        desc: "Patatas fritas con bacon bits y queso fundido al horno.",
-        img: "https://glovo.dhmedia.io/image/menus-glovo/products/02ce9c6614b9586bdcf2d48414008961b14c7604aa4dbe274393c5c20b3984e2?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Tequeños Aurora (5 uds.)",
@@ -113,14 +69,27 @@ const sections: Section[] = [
       },
       {
         name: "Alitas Cerberus (5 uds.)",
-        price: "8,00 €",
+        price: "9,00 €",
         desc: "Crujientes alitas de pollo bañadas en salsa barbacoa.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/f79dfccc936122a4aeea5444f399422f8d4c4c3b96c4c53ba5978cc817d36f0c?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
+    ],
+  },
+  {
+    title: "Before Heaven",
+    kicker: "Croquetas de la casa",
+    items: [
       {
-        name: "Adonis",
-        price: "11,00 €",
-        desc: "Empanadillas chinas con carrillera de cerdo y salsa kimchi.",
+        name: "Croqueta Titán (1 ud.)",
+        price: "3,90 €",
+        desc: "Croqueta de chuletón.",
+        img: "https://glovo.dhmedia.io/image/menus-glovo/products/3c0fef1833988e1b90efc856964aa924f11cd6de3e89bc01d15d14db9e81b8a2?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
+      },
+      {
+        name: "Croqueta Golden (1 ud.)",
+        price: "3,50 €",
+        desc: "Croqueta de jamón.",
+        img: "https://glovo.dhmedia.io/image/menus-glovo/products/b8573baecae7aa645fca8cf46168b4f9da8490c168cff05004be8867ae271352?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
     ],
   },
@@ -129,52 +98,41 @@ const sections: Section[] = [
     kicker: "Doble smash, doble carácter",
     items: [
       {
-        name: "Zeus (Clásica)",
-        price: "12,90 €",
-        desc: "Pan brioche, doble smash, doble cheddar, bacon crujiente y salsa Jowi's.",
+        name: "Vulcano",
+        price: "16,90 €",
+        desc: "Pan potato, pulled pork, cheddar, gouda y salsa bbq ahumada. Acompañada de patatas fritas.",
+        img: "https://glovo.dhmedia.io/image/menus-glovo/products/65128d9d8195c14debc5dd2cbe68154f08df9897c78823f0a467ea86ac9e6ce8?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
+      },
+      {
+        name: "Zeus",
+        price: "15,90 €",
+        desc: "Pan brioche, doble smash, doble cheddar, bacon crujiente y salsa jowi's. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/c1bff7367b6497dd74fba262e07c335353aa6cce8374e4e530157c36a8d60560?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
         badge: "Más vendida",
       },
       {
-        name: "Vulcano",
-        price: "13,90 €",
-        desc: "Pan potato, pulled pork, cheddar, gouda y salsa bbq ahumada.",
-        img: "https://glovo.dhmedia.io/image/menus-glovo/products/65128d9d8195c14debc5dd2cbe68154f08df9897c78823f0a467ea86ac9e6ce8?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-      {
         name: "Hermes",
-        price: "13,90 €",
-        desc: "Pan brioche, doble smash, cheddar, pepinillos, crispy onion y salsa Jowi's.",
+        price: "15,90 €",
+        desc: "Pan brioche, doble smash, cheddar, pepinillos, crispy onion y salsa jowi's. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/877b2eedef72496692513afd3963955a42872d6507fc675afd66f6fb3db33b79?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Hades",
-        price: "13,90 €",
-        desc: "Pan potato, doble smash, cheddar, mozzarella y salsa secreta de bacon miel con toque picante.",
+        price: "15,90 €",
+        desc: "Pan potato, doble smash, cheddar, mozzarella y salsa secreta de bacon miel con toque picante. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/69760e2735ee900484c8731111a31c22b8663e0d8ef74d9683e4c364b92f6cdd?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Ares",
-        price: "14,00 €",
-        desc: "Pan brioche, doble smash, cheddar gouda, pico de gallo, jalapeños y mayo de ajo asado.",
+        price: "15,90 €",
+        desc: "Pan brioche, doble smash, cheddar gouda, pico de gallo, jalapeños y mayo de ajo asado. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/d9b6b421de8249c4d19c357797f45c18f118c17775f830376ca058a8db05286c?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
-        name: "Apollo (Oklahoma)",
-        price: "12,90 €",
-        desc: "Pan brioche, doble smash con cebolla fina, cheddar y toque de mostaza.",
+        name: "Apollo",
+        price: "14,90 €",
+        desc: "Pan brioche, doble smash con cebolla fina, cheddar y toque de mostaza. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/115ab46358c9477cca2fe25ec84ed0f3ea4b8bcd1b9ca481be193e82dc0258f6?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-    ],
-  },
-  {
-    title: "Menú Infantil",
-    kicker: "Para los peques",
-    items: [
-      {
-        name: "Hércules",
-        price: "10,00 €",
-        desc: "Burger clásica con ternera, cheddar, kétchup y mostaza. Incluye patatas, bebida y bola de helado.",
       },
     ],
   },
@@ -183,34 +141,29 @@ const sections: Section[] = [
     kicker: "Chuletón y panes premium",
     items: [
       {
+        name: "Olympus",
+        price: "19,50 €",
+        desc: "Pan Queens high, medallón de rubia gallega madurada, cheddar ahumado, bacon bits y salsa emmy. Acompañada de patatas fritas.",
+        img: "https://glovo.dhmedia.io/image/menus-glovo/products/20e31d72ba55d9b73806bafb01e815f102ead474a53cca1d0ed987a6e5e2723c?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
+      },
+      {
         name: "Jowi's",
-        price: "15,00 €",
-        desc: "Pan potato high, medallón de chuletón, mozzarella, mermelada de bacon y mayo trufada.",
+        price: "17,90 €",
+        desc: "Pan potato high, medallón de chuletón, mozzarella, mermelada de bacon y mayo trufada. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/global-menu-service/GV_ES/vendor/937602/product/42362777541/4c79d046-db53-4d19-b6bc-eb24d58733fa.jpg?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
         badge: "Firma de la casa",
       },
       {
         name: "Kronos",
-        price: "15,00 €",
-        desc: "Pan brioche high, medallón de chuletón, gouda, huevo frito y salsa ranch bacon.",
+        price: "17,90 €",
+        desc: "Pan brioche high, medallón de chuletón, gouda, huevo frito y salsa ranch bacon. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/3aa6a1a281992267fee1c7a2f042bf1b3e4db0644ab3a89346c6075f57659bab?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Oblivion",
-        price: "15,50 €",
-        desc: "Pan brioche high, medallón de chuletón, doble cheddar, cebolla caramelizada y mayo de ajo negro.",
+        price: "17,90 €",
+        desc: "Pan brioche high, medallón de chuletón, doble cheddar, cebolla caramelizada y mayo de ajo negro. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/27fa63cfc7aa36618f4214da7040bf1b71e14eedd8ad68c5304cec2aebb2ec25?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-      {
-        name: "Olympus",
-        price: "16,50 €",
-        desc: "Pan Queens high, medallón de rubia gallega madurada, bacon bits y salsa Emmy.",
-        img: "https://glovo.dhmedia.io/image/menus-glovo/products/20e31d72ba55d9b73806bafb01e815f102ead474a53cca1d0ed987a6e5e2723c?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
-      },
-      {
-        name: "Pegasus",
-        price: "14,50 €",
-        desc: "Pan potato high, contramuslo rebozado, cheddar, gouda, lechuga fresca y mayo sriracha.",
       },
     ],
   },
@@ -221,13 +174,13 @@ const sections: Section[] = [
       {
         name: "Athena (sin gluten)",
         price: "16,00 €",
-        desc: "Pan sin gluten, carne de 180 g, cheddar, cebolla caramelizada y mayo de ajo asado.",
+        desc: "Pan sin gluten, carne de 180 g, cheddar, cebolla caramelizada y mayo de ajo asado. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/1fbf5b8d0f6c88adb2f2f45f21fd4831c8b00e49fd99c60951c61371685e7838?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
       {
         name: "Gaia (vegana)",
         price: "16,00 €",
-        desc: "Pan veggie, burger veggie, lechuga fresca, tomate y queso vegano.",
+        desc: "Pan veggie, burger veggie, lechuga fresca, tomate y queso vegano. Acompañada de patatas fritas.",
         img: "https://glovo.dhmedia.io/image/menus-glovo/products/4c9814c7d759ac3c98676e3486c9fd05a2a2d3df91804413201938502f59a078?t=W3sicmVzaXplIjp7Im1vZGUiOiJmaXQiLCJ3aWR0aCI6NjQwLCJoZWlnaHQiOjY0MH19LHsid2VicCI6e319XQ==",
       },
     ],
@@ -346,23 +299,12 @@ function Carta() {
               {section.items.map((item) => (
                 <article key={item.name} className="group flex flex-col">
                   <div className="relative aspect-square overflow-hidden bg-ink">
-                    {item.img ? (
-                      <img
-                        src={item.img}
-                        alt={item.name}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center">
-                        <svg viewBox="0 0 24 24" className="h-10 w-10 text-ember/70">
-                          <path
-                            fill="currentColor"
-                            d="M12 0l1.4 8.6L22 10l-8.6 1.4L12 20l-1.4-8.6L2 10l8.6-1.4L12 0z"
-                          />
-                        </svg>
-                      </div>
-                    )}
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
                     {item.badge && (
                       <span className="absolute top-3 left-3 rounded-sm bg-ember px-2 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ember-foreground">
                         {item.badge}
@@ -451,14 +393,7 @@ function Carta() {
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 px-6 py-8 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground md:px-12">
           <span>© 2026 Jowi's · Hamburguesería</span>
           <Link to="/" className="hover:text-foreground">← Inicio</Link>
-          <a
-            href="https://www.instagram.com/jowis.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            Instagram · @jowis.co
-          </a>
+          <span>Carta actualizada · Glovo</span>
         </div>
       </footer>
     </main>

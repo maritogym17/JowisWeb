@@ -12,31 +12,31 @@ export const Route = createFileRoute("/")({
 
 const menu = [
   {
-    name: "Jowi's",
+    name: "La Jowi's",
     kicker: "Firma de la casa",
-    price: "15,00 €",
-    desc: "Pan potato high, medallón de chuletón, mozzarella, mermelada de bacon y mayo trufada — la razón por la que vuelven.",
+    price: "13,50 €",
+    desc: "Doble smash de vaca madurada, cheddar fundido, cebolla caramelizada, pepinillo encurtido y nuestra salsa Jowi's — la razón por la que vuelven.",
     img: heroBurger,
   },
   {
-    name: "Zeus (Clásica)",
-    kicker: "Más vendida",
-    price: "12,90 €",
-    desc: "Pan brioche, doble smash, doble cheddar, bacon crujiente y salsa Jowi's.",
+    name: "Zeus",
+    kicker: "Solo carne, sin excusas",
+    price: "14,90 €",
+    desc: "180 g de carne premium al punto, un pan brioche tostado en mantequilla y una pizca de sal marina. Puro producto.",
     img: null,
   },
   {
     name: "Jowi's Fries",
     kicker: "Guarnición estrella",
-    price: "11,50 €",
-    desc: "Patatas fritas con queso fundido, pulled pork, bacon bits y salsa Jowi's.",
+    price: "5,90 €",
+    desc: "Patata cortada a mano, doble fritura, escamas de sal Maldon y una nube de queso curado rallado al momento.",
     img: fries,
   },
   {
-    name: "Elysium Nachos",
+    name: "Nachos de la casa",
     kicker: "Para compartir",
-    price: "12,00 €",
-    desc: "Totopos caseros, guacamole, crema agria, pico de gallo, jalapeños, cheddar y pulled pork.",
+    price: "8,50 €",
+    desc: "Totopos crujientes, cheddar fundido, carne desmenuzada, jalapeño fresco y salsa brava. La entrada que nunca sobra.",
     img: nachos,
   },
   {
@@ -467,14 +467,7 @@ function Index() {
       <footer className="rule-t">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 px-6 py-8 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground md:px-12">
           <span>© 2026 Jowi's · Hamburguesería</span>
-          <a
-            href="https://www.instagram.com/jowis.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground"
-          >
-            Instagram · @jowis.co
-          </a>
+          <span>Hecho con amor en Murcia</span>
           <span>Vol. I · No. 04</span>
         </div>
       </footer>
