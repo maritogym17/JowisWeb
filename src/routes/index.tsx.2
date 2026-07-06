@@ -86,32 +86,19 @@ function Index() {
       </a>
 
       {/* Masthead */}
-      <header className="mx-auto max-w-[1400px] px-6 pt-6 pb-3 md:flex md:items-center md:justify-between md:px-12 md:pt-8 md:pb-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-baseline gap-3">
-            <span className="font-display text-2xl tracking-tight md:text-3xl">Jowi's</span>
-            <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:inline">
-              Est. Murcia
-            </span>
-          </div>
-          <a
-            href="tel:+34645457943"
-            aria-label="Llamar a Jowi's"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/80 md:hidden"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
-              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z" />
-            </svg>
-          </a>
+      <header className="mx-auto flex max-w-[1400px] items-center justify-between px-6 pt-8 pb-4 md:px-12">
+        <div className="flex items-baseline gap-3">
+          <span className="font-display text-2xl tracking-tight md:text-3xl">Jowi's</span>
+          <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground md:inline">
+            Est. Murcia
+          </span>
         </div>
-
-        <nav className="-mx-6 mt-3 flex gap-6 overflow-x-auto px-6 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:mx-0 md:mt-0 md:gap-8 md:overflow-visible md:px-0">
-          <Link to="/carta" className="shrink-0 hover:text-foreground">Carta completa</Link>
-          <a href="#resenas" className="shrink-0 hover:text-foreground">Reseñas</a>
-          <a href="#visita" className="shrink-0 hover:text-foreground">Visita</a>
+        <nav className="hidden gap-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex">
+          <Link to="/carta" className="hover:text-foreground">Carta completa</Link>
+          <a href="#resenas" className="hover:text-foreground">Reseñas</a>
+          <a href="#visita" className="hover:text-foreground">Visita</a>
         </nav>
-
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="flex items-center gap-2">
           <a
             href="https://wa.me/34645457943?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20Jowi%27s"
             target="_blank"
@@ -267,7 +254,7 @@ function Index() {
                       </div>
                     )}
                   </div>
-                  <span className="col-span-12 text-right font-display text-2xl md:col-span-1 md:text-3xl">
+                  <span className="col-span-6 text-right font-display text-2xl md:col-span-1 md:text-3xl">
                     {item.price}
                   </span>
                 </li>
